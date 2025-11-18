@@ -1,0 +1,10 @@
+# --- Archivos generados al compilar ---
+*.o
+*.a
+
+# --- Ejecutables ---
+a.out
+main
+
+# --- Visual Studio Code ---
+.vscode/
