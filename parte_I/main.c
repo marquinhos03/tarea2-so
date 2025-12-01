@@ -1,5 +1,9 @@
 #include "parte1.h"
 
+// Compilación sin Makefile
+// gcc -o parte1 parte_I/main.c parte_I/monitor.c -Iparte_I -pthread
+// Uso: ./parte1
+
 Barrier barrera;
 int N = N_DEFAULT;
 int E = E_DEFAULT;
