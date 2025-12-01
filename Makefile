@@ -12,18 +12,17 @@ DIR2 = parte_II
 SRC2 := $(wildcard $(DIR2)/*.c)
 INC2 = -I$(INCLUDEDIR) -I$(DIR2)
 
-
 all: $(EXEC1) $(EXEC2)
 
-# Para crear el ejecutable 'parte1'
+# Para crear el ejecutable "parte1"
 $(EXEC1): $(SRC1)
 	@echo "Compilando Parte I..."
-	$(CC) $(CFLAGS) $(SRC1) $(INC1) -o $(EXEC1)
+	$(CC) $(CFLAGS) -pthread $(SRC1) $(INC1) -o $(EXEC1)
 
-# Para crear el ejecutable 'sim'
+# Para crear el ejecutable "sim"
 $(EXEC2): $(SRC2)
 	@echo "Compilando Simulador (Parte II)..."
-	$(CC) $(CFLAGS) $(SRC2) $(INC2) -o $(EXEC2)
+	$(CC) $(CFLAGS) $(SRC2) $(INC2) -o $(EXEC2) -lm
 
 clean:
 	@echo "Limpiando ejecutables..."

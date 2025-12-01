@@ -6,8 +6,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+#include <math.h>
 
 // Structs de datos
+
 typedef struct {
    unsigned int NM; // Marco de página
    int V;  // Bit válido
@@ -34,5 +36,47 @@ typedef struct {
    unsigned long df;       // Dirección física
 } DireccionFisica;
 
+// Struct para la trace
+typedef struct {
+    unsigned int *direcciones;
+    int n_lineas;
+} TraceData;
+
+
+// leer_traza.c
+
+TraceData *leer_traza(const char *nombre_archivo);
+void free_traza(TraceData *trace);
+
+
+// simulador_utils.c
+
+DireccionVirtual descomponer_dv(unsigned long dv, int b, unsigned long mask);
+
+DireccionFisica calcular_df(unsigned int marco,int b,unsigned long offset);
+
+int asignar_marco(
+    Marco *memoria_fisica,
+    PTE *tabla_paginas,
+    int *manecilla,
+    int N_marcos
+);
+
+void resolver_fallo_de_pagina(
+    unsigned long npv_fallo,
+    PTE *tabla_paginas,
+    Marco *memoria_fisica,
+    int *manecilla,
+    int N_marcos
+);
+
+DireccionFisica traducir_direccion(
+    DireccionVirtual dv,
+    PTE *tabla_paginas,
+    int b,
+    Marco *memoria_fisica,
+    int *manecilla,
+    int N_marcos
+);
 
 #endif
