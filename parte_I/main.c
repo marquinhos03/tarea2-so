@@ -22,6 +22,8 @@ void *ejecutar_etapa(void* arg) {
       // d) Imprime después de pasar
       printf("[%ld] paso barrera en etapa %d\n", tid, e);
    }
+
+   return NULL;
 }
 
 // main
