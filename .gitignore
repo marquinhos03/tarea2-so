@@ -5,6 +5,8 @@
 # --- Ejecutables ---
 a.out
 main
+parte1
+sim
 
 # --- Visual Studio Code ---
 .vscode/
