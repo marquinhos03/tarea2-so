@@ -1,13 +1,13 @@
 # Tarea 2: Sistemas Operativos
 
-## Sobre la Tarea 
+### Sobre la Tarea 
 
-### Parte I. Sincronización con Barrera reutilizable
+#### Parte I. Sincronización con Barrera reutilizable
 > **Actividad 1:** Implementación de la barrera (Monitor).
 >
 > **Actividad 2:** Aplicación de verificación de comportamiento de la barrera.
 
-### Parte II. Simulador simple de Memoria Virtual
+#### Parte II. Simulador simple de Memoria Virtual
 > En esta parte debe implementar un simulador, **sim** con paginación simple y soporte de algoritmo de reemplazo Reloj con un solo puntero.
 
 
